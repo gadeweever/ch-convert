@@ -13,10 +13,10 @@ Then to use the converter specify the flag you would like to use :
 
 ```
 //converts simplified to traditional
-var converted_string = converter.convert("some simplified character string", converter.Trad());
+var converted_string = converter.convert("simplified character string", converter.Trad());
 
 //converts traditional to simplified
-var converted_string = converter.convert("some traditional character string", converter.Simp());
+var converted_string = converter.convert("traditional character string", converter.Simp());
 ```
 
 If the converter does not find a matching character, it will just return that same character.
