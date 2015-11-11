@@ -1,7 +1,8 @@
-﻿var simptable = require('./tables/s2t.js');
+var simptable = require('./tables/s2t.js');
 var tradtable = require('./tables/t2s.js');
 var Simp = "simplified";
 var Trad = "traditional";
+
 
 var zhEncodesSimp = ["gb2312", "gbk", "x-gbk", "gb18030", "hz-gb-2312", "iso-2022-cn"];
 var zhEncodesTrad = ["big5", "big5-hkscs", "x-euc-tw"];
@@ -16,14 +17,15 @@ var maxTSLen = 1;
 var curZhFlag = "";
 
 module.exports = {
-
+        Simp: function (){ return Simp; },
+        Trad: function(){ return Trad;},
         convert: function (str, zhflag) {
             var leng = 4;
             var zmap = null;
 
             if (zhflag == Simp)
             {
-                /
+
                 zmap = t2s;
                 leng = Math.min(maxTSLen, str.length);
             } else

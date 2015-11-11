@@ -13,12 +13,14 @@ Then to use the converter specify the flag you would like to use :
 
 ```
 //converts simplified to traditional
-var converted_string = converter.convert("some simplified character", converter.Trad);
+var converted_string = converter.convert("some simplified character string", converter.Trad());
 
 //converts traditional to simplified
-var converted_string = converter.convert("some traditional character", converter.Simp);
+var converted_string = converter.convert("some traditional character string", converter.Simp());
 ```
 
+If the converter does not find a matching character, it will just return that same character.
+This works well for texts that have both English and Chinese characters in them.
 # credits
 
 Special thanks http://siongui.github.io/ for the conversion tables
